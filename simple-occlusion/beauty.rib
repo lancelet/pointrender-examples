@@ -1,0 +1,17 @@
+# Beauty pass
+Format 1920 1080 1.0
+PixelFilter "mitchell" 2.5 2.5
+PixelSamples 6 6
+Option "limits" "bucketsize" [ 32 32 ]
+Display "beauty.tif" "file" "rgb"
+Display "+beauty" "framebuffer" "rgb"
+Projection "perspective" "fov" [ 30.0 ]
+Translate 0 -1.5 15
+Rotate -110 1 0 0
+DepthOfField 4.0 1.0 14
+WorldBegin
+  Surface "matteocclusion"
+          "string ptCloudName" [ "occlusion.ptc" ]
+          "float baking" [ 0 ]
+  ReadArchive "world.rib"
+WorldEnd
