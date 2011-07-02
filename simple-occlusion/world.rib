@@ -1,6 +1,6 @@
 # Background
 AttributeBegin
-  ShadingRate 4
+  ShadingRate 2
   ShadingInterpolation "smooth"
   Sides 1
   Scale 2 1 1
@@ -11,30 +11,39 @@ AttributeBegin
      10  10 0
   ]
   AttributeBegin
-    ReverseOrientation
-    Translate 0 -10 2
-    Rotate 90 0 1 0
-    Rotate -90 0 0 1
-    Cylinder 2 -10 10 90
+    ShadingRate 128
+    AttributeBegin
+      ReverseOrientation
+      Translate 0 -10 2
+      Rotate 90 0 1 0
+      Rotate -90 0 0 1
+      Cylinder 2 -10 10 90
+    AttributeEnd
+    Patch "bilinear" "P" [
+      -10 -12 12
+       10 -12 12
+      -10 -12  2
+       10 -12  2
+    ]
   AttributeEnd
-  Patch "bilinear" "P" [
-    -10 -12 12
-     10 -12 12
-    -10 -12  2
-     10 -12  2
-  ]
 AttributeEnd
 # Teapot
 AttributeBegin
+  ShadingRate 1
+  ShadingInterpolation "smooth"
   Translate -2.5 1 0
   Rotate 30 0 0 1
+  Translate 0 0 0.02 # bump off the ground plane slightly
   Geometry "teapot"
 AttributeEnd
 # Bunny
 AttributeBegin
+  Attribute "aqsis" "expandgrids" [ 0.04 ]
+  ShadingRate 4
+  ShadingInterpolation "smooth"
   Sides 1
   Translate 2.5 -1 0
-  Translate 0 0 0.005 # bump off the ground plane slightly
+  Translate 0 0 0.02 # bump off the ground plane slightly
   Rotate 180 0 0 1
   Geometry "bunny"
 AttributeEnd

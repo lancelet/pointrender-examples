@@ -17,7 +17,7 @@ light occlight (
   float intensity = 1;
   color lightcolor = 1;
 ) {
-  uniform float maxsolidangle = 0.05;
+  uniform float maxsolidangle = 0.04;
   attribute("user:maxsolidangle", maxsolidangle);
   
   /* compute ambient lighting if we're not baking */
@@ -25,7 +25,7 @@ light occlight (
   if (pointCloudFile != "") {
     aocc = 1 - occlusion(Ps, Ns, 0, "filename", pointCloudFile,
                          "maxsolidangle", maxsolidangle,
-                         "microbufres", 4,
+                         "microbufres", 8,
                          "pointbased", 1);
   }
   

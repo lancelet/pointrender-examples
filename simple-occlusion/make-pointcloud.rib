@@ -1,6 +1,6 @@
 # Point cache
-Format 1920 1080 1.0
-Option "limits" "bucketsize" [ 32 32 ]
+Format 1280 720 1.0
+Option "limits" "bucketsize" [ 128 128 ]
 Hider "hidden" "jitter" [ 0 ]
 PixelFilter "box" 1 1
 PixelSamples 1 1

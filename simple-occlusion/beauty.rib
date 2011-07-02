@@ -1,5 +1,5 @@
 # Beauty pass
-Format 1920 1080 1.0
+Format 1280 720 1.0
 PixelFilter "mitchell" 2.5 2.5
 PixelSamples 4 4
 Option "limits" "bucketsize" [ 32 32 ]
