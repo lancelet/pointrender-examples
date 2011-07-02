@@ -1,5 +1,7 @@
 # Background
 AttributeBegin
+  ShadingRate 4
+  ShadingInterpolation "smooth"
   Sides 1
   Scale 2 1 1
   Patch "bilinear" "P" [ 

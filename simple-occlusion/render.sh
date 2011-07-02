@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-aqsl matteocclusion.sl
+aqsl *.sl
 aqsis make-pointcloud.rib
 aqsis beauty.rib
