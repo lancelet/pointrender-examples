@@ -2,6 +2,7 @@
 Format 1280 720 1.0
 PixelFilter "mitchell" 2.5 2.5
 PixelSamples 4 4
+Exposure 1.0 2.2
 Option "limits" "bucketsize" [ 32 32 ]
 Display "beauty.tif" "file" "rgb"
 Display "+beauty" "framebuffer" "rgb"
@@ -11,6 +12,7 @@ Rotate -110 1 0 0
 DepthOfField 4.0 0.3 14
 WorldBegin
   LightSource "occlight" 1 "string pointCloudFile" [ "occlusion.ptc" ]
+              "float intensity" [ 0.75 ]
   Surface "supermatte"
   ReadArchive "world.rib"
 WorldEnd
